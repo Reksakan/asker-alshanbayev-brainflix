@@ -1,0 +1,44 @@
+@import './variables.scss'; 
+
+@mixin mobile {
+    @media screen and (min-width: $mobile-breakpoit) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media screen and (min-width: $tablet-breakpoint) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media screen and (min-width: $desktop-breakpoint) {
+        @content; 
+    }
+}
+
+@mixin flex-col{
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin flex-row{
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin flex-relative {
+    display: flex;
+    position: relative;
+}
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+}
+
+@mixin mobile-margins {
+    margin-right: 1rem;
+    margin-left: 1rem;
+}

@@ -1,0 +1,42 @@
+@import '../../partials/variables.scss';
+@import '../../partials/mixins.scss';
+@import '../../partials/fonts.scss';
+
+.header {
+    border: 1px solid violet;
+    @include flex-col; 
+    @include mobile-margins;
+    align-items: center;
+
+    &__logo {
+        border: 1px solid brown;
+        margin: 0.75rem 0;
+    }
+    &__search-input {
+        width: 18rem;
+        height: 3rem;
+        border-radius: 0.25rem;
+        
+    }
+    &__upload {
+        border: 1px solid darkblue;
+        @include flex-row;
+        margin: 0.5rem 0 1rem 0rem;
+    }
+    &__upload-button {
+        width: 226px;
+        margin-right: 1rem;
+        border-radius: 0.25rem;   
+    }
+    &__avatar {
+        border: 1px solid salmon;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 1rem;
+    }
+}
+
+.search {
+    @include flex-col;
+
+}
