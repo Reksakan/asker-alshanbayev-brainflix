@@ -12,16 +12,13 @@
   }
 }
 .comment {
-  border: 1px solid darkgreen;
   font-family: 'Avenir demi';
   font-size: 1.1rem;  
   margin-bottom: 2rem;
   &__form {
-  border: 1px solid violet;
   @include flex-row;
   }
   &__avatar {
-    border: 1px solid grey; 
     @include avatar-mobile;
     margin-top: 1rem;
     margin-right: 1rem;
@@ -32,7 +29,6 @@
   &__input {
     @include flex-col;
     flex-grow: 1;
-    border: 1px solid;
     min-width: 13.875rem;
     
     @include tablet {
@@ -40,7 +36,6 @@
     }
   }
   &__text-title {
-    border: 1px solid red;
     font-family: 'Avenir';
     font-size: 0.8rem;
     color: #AFAFAF;

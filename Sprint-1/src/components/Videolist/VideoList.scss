@@ -3,7 +3,6 @@
 @import '../../partials/fonts.scss';
 
 .video {
-  border: 1px solid goldenrod;
   @include flex-relative();
   margin: 0 1rem 1.5rem 1rem;
   @include tablet {
@@ -19,14 +18,12 @@
     margin-right: 1rem;
   }
   &__text {
-    border: 1px solid lightskyblue;
     @include flex-col;
     min-width: 9.75rem;
     max-width: 13rem;
     margin-right: 0;
   }
   &__text-title {
-    border: 1px solid darkcyan;
     font-family: 'Avenir demi';
     font-size: 0.8rem;
     margin-bottom: 1rem;

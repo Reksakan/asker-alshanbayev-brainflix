@@ -3,7 +3,6 @@
 @import '../../partials/fonts.scss';
 
 .header {
-    border: 1px solid violet;
     @include flex-col; 
     @include margins-mobile;
     align-items: center;
@@ -15,7 +14,6 @@
       @include margins-desktop;
     }
     &__search {
-      border: 1px solid red;
       @include tablet {
         @include flex-row;
         align-items: center;
@@ -23,7 +21,6 @@
     }
 
     &__logo {
-        border: 1px solid brown;
         margin: 0.75rem 0;
         @include tablet {
           margin-right: 10.5625rem;
@@ -45,7 +42,6 @@
         
     }
     &__upload {
-        border: 1px solid darkblue;
         @include flex-row;
         margin: 0.5rem 0 1rem 0rem;
         @include tablet {
@@ -62,7 +58,6 @@
       }
     }
     &__avatar {
-        border: 1px solid salmon;
         @include avatar-mobile1;
     }
 }

@@ -12,7 +12,6 @@
   }
   
   &__title {
-  border: 1px solid red;
   @include flex-col;
   margin-top: 1red;
   @include tablet {
@@ -24,11 +23,10 @@
     width: 42.5rem;
   }
   }
-  &__author {
-    border: 1px solid blueviolet;
-  }
+  // &__author {
+    
+  // }
   &__status {
-    border: 1px solid lawngreen;
     display: flex;
     height: 1.5rem;
     margin-top: 2rem;
@@ -37,7 +35,6 @@
     }
   }
   &__viewed {
-    border: 1px solid lightseagreen;
     @include flex-align-center;
   }
   &__viewed--margins {
@@ -48,11 +45,9 @@
   }
 
   &__liked {
-    border: 1px solid lightseagreen;
     @include flex-align-center;
   }
   &__text {
-    border: 1px solid red;
     margin-bottom: 2.5rem;
     max-width: 32.5rem;
     @include tablet {

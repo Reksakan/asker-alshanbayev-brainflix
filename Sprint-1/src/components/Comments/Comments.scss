@@ -3,7 +3,6 @@
 @import '../../partials/fonts.scss';
 
 .comment-single {
-  border: 1px solid red;
   border-top: 1px solid #e1e1e1;
   border-bottom: 1px solid #e1e1e1;
   
@@ -19,7 +18,6 @@
 }
 
 .comments__avatar {
-  border: 1px solid grey; 
   background-color: silver;
   width: 2.5rem;
   height: 2.5rem;
@@ -28,7 +26,6 @@
 }
 
 .comment__text-header {
-  border: 1px solid aqua;
   @include flex-row;
   justify-content: space-between;
   width: 100%;
@@ -40,7 +37,6 @@
 
 .comment__text-user {
   align-self: center;
-  border: 1px solid brown;
   font-family: 'Avenir';
   font-size: 0.8rem;
   margin-top: 0;
@@ -56,14 +52,12 @@
   align-self: center;
   font-size: 0.8rem;
   color: #AFAFAF;
-  border: 1px solid brown;
   @include tablet {
       margin-left: 0; 
   }
 }
 
 .comment__text {
-  border: 1px solid maroon;
   max-width: 39rem;
   height: auto;
   padding-right: 0;
