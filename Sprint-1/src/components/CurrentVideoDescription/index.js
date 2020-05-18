@@ -1,1 +1,1 @@
-// export {default} from './CurrentVideoDescription'
+export {default} from './CurrentVideoDescription'

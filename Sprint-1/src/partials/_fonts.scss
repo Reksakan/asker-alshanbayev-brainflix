@@ -1,23 +1,23 @@
-// @font-face {
-//     font-family: 'Avenir';
-//     src: url('../assets/fonts/LinotypeAvenirNextLTProRegular.otf');
-// }
+@font-face {
+    font-family: 'Avenir';
+    src: url('../assets/_Global-Font/AvenirNextProLT/Linotype-AvenirNextLTPro-Regular.otf'); //LinotypeAvenirNextLTProRegular.otf
+}
 
-// @font-face {
-//     font-family: 'Avenir bold';
-//     src: url('../assets/fonts/LinotypeAvenirNextLTProBold.otf');
-// }
+@font-face {
+    font-family: 'Avenir bold';
+    src: url('../assets/_Global-Font/AvenirNextProLT/Linotype-AvenirNextLTPro-Bold.otf');    //LinotypeAvenirNextLTProBold.otf
+}
 
-// @font-face {
-//     font-family: 'Avenir demi';
-//     src: url('../assets/fonts/LinotypeAvenirNextLTProDemi.otf');
-// }
+@font-face {
+    font-family: 'Avenir demi';
+    src: url('../assets/_Global-Font/AvenirNextProLT/Linotype-AvenirNextLTPro-Demi.otf');     //LinotypeAvenirNextLTProDemi.otf
+}
 
-// html {
-//     font-size: 16px;
-//     font-family: 'Avenir';
-//     color: #323232;
-// }
+html {
+    font-size: 16px;
+    font-family: 'Avenir';
+    color: #323232;
+}
 
 // // @include tablet {font-size: 3.75rem;};
 

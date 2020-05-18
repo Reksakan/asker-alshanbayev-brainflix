@@ -5,38 +5,72 @@
 .header {
     border: 1px solid violet;
     @include flex-col; 
-    @include mobile-margins;
+    @include margins-mobile;
     align-items: center;
+    @include tablet {
+      @include margins-tablet;
+      @include flex-row;
+    }
+    @include desktop {
+      @include margins-desktop;
+    }
+    &__search {
+      border: 1px solid red;
+      @include tablet {
+        @include flex-row;
+        align-items: center;
+      }
+    }
 
     &__logo {
         border: 1px solid brown;
         margin: 0.75rem 0;
+        @include tablet {
+          margin-right: 10.5625rem;
+        }
+        @include desktop {
+          margin-right: 31.8125rem;
+        }
     }
     &__search-input {
         width: 18rem;
         height: 3rem;
         border-radius: 0.25rem;
+        @include tablet {
+          width: 15.5rem;
+        }
+        @include desktop {
+          margin-right: 1.5rem;
+        }
         
     }
     &__upload {
         border: 1px solid darkblue;
         @include flex-row;
         margin: 0.5rem 0 1rem 0rem;
+        @include tablet {
+          margin-top: 0;
+          margin-bottom: 0;
+        }
     }
     &__upload-button {
-        width: 226px;
-        margin-right: 1rem;
-        border-radius: 0.25rem;   
+      @include button-mobile;  
+      margin-right: 1rem;
+      @include tablet {
+        width: 6.25rem;
+        margin-right: 1.5rem;
+      }
     }
     &__avatar {
         border: 1px solid salmon;
-        width: 2rem;
-        height: 2rem;
-        border-radius: 1rem;
+        @include avatar-mobile1;
     }
 }
 
 .search {
     @include flex-col;
+    @include tablet {
+      @include flex-row;
+    }
 
 }
