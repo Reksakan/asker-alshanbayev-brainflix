@@ -1,6 +1,8 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom'; 
 import HomePage from './HomePage';
+import UploadPage from './components/UploadPage';
+
 
 class App extends React.Component {
   render () {
@@ -9,8 +11,8 @@ class App extends React.Component {
         <Switch>
           <Route path="/" exact component={HomePage} />
           <Route path="/home" component={HomePage} />
-          {/* <Route path="/video-player-page/:currVideoID" component={HomePage} />
-          <Route path="/upload" component={UploadPage} /> */}
+          <Route path="/video-player-page/:currVideoID" component={HomePage} />
+          <Route path="/upload" component={UploadPage} />
         </Switch>
       </BrowserRouter>
     )

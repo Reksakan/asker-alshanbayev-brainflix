@@ -1,8 +1,7 @@
 import React from 'react';
 import './Comments.scss';
 
-const Comments = props => {   
-  console.log(props);  
+const Comments = props => {     
   const commentsList = props.CommentsHistory.map(comment => {   
   return (
   <section className="comments-section" key={comment.id}>
