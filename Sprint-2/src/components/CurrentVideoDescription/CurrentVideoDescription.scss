@@ -1,0 +1,57 @@
+@import '../../partials/variables.scss';
+@import '../../partials/mixins.scss';
+@import '../../partials/fonts.scss';
+
+.description {
+  @include margins-mobile;
+  @include tablet {
+    @include margins-tablet;
+  }
+  @include desktop {
+    margin-left: 11.25rem;
+  }
+  
+  &__title {
+  @include flex-col;
+  margin-top: 1red;
+  @include tablet {
+    @include flex-row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  @include desktop {
+    width: 42.5rem;
+  }
+  }
+  // &__author {
+    
+  // }
+  &__status {
+    display: flex;
+    height: 1.5rem;
+    margin-top: 2rem;
+    @include tablet {
+      margin-top: 0;
+    }
+  }
+  &__viewed {
+    @include flex-align-center;
+  }
+  &__viewed--margins {
+    @include tablet {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  &__liked {
+    @include flex-align-center;
+  }
+  &__text {
+    margin-bottom: 2.5rem;
+    max-width: 32.5rem;
+    @include tablet {
+      margin-bottom: 3.0625rem;
+    }
+  }
+}

@@ -1,0 +1,36 @@
+@import '../../partials/variables.scss';
+@import '../../partials/mixins.scss';
+@import '../../partials/fonts.scss';
+
+.video {
+  @include flex-relative();
+  margin: 0 1rem 1.5rem 1rem;
+  @include tablet {
+    margin: 0 1.5rem 1.5rem 1.5rem;
+  }
+  @include desktop {
+    margin-right: 11.25rem;
+  }
+  
+  &__img {
+    width: 7.5rem;
+    height: 4.375rem;
+    margin-right: 1rem;
+  }
+  &__text {
+    @include flex-col;
+    min-width: 9.75rem;
+    max-width: 13rem;
+    margin-right: 0;
+  }
+  &__text-title {
+    font-family: 'Avenir demi';
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+  }
+  &__text-author {
+    @extend .video__text-title;
+    font-family: 'Avenir'; 
+  }
+  
+  }

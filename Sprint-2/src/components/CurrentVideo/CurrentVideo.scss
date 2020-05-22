@@ -1,0 +1,23 @@
+@import '../../partials/variables.scss';
+@import '../../partials/mixins.scss';
+@import '../../partials/fonts.scss';
+
+.video-box {
+  @include desktop {
+    width: 100%;
+    background-color: black;
+  }
+}
+
+.current-video {
+    display: flex;
+    width: 100%;
+    height: 57.188vw;
+    @include desktop {
+      width: 944px;
+      height: 540px;
+      margin-left: 244px;
+      margin-right: 244px;
+    }
+}
+
