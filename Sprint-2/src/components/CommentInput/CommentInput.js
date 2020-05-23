@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
 import './CommentInput.scss';
 
-class CommentInput extends React.Component {
-  render() {
+const CommentInput = () => {
+  // const commentsCount = currentVid.comments.toArray().length; 
+    // var size = Object.keys(currentVid.comments).length;
+    // console.log('Array length is: ', size);
+    // console.log('Comments: ', currentVid.comments);
     return (
       <section className="comment-section">
         <h2 className="comment">3 Comments</h2>
@@ -16,7 +19,6 @@ class CommentInput extends React.Component {
         </form>
       </section>
     )
-  }
 }
 
 export default CommentInput;
