@@ -21,7 +21,7 @@ class HomePage extends React.Component {
       currentVidComments: [],
       listOfVid: []
   }
-
+  //Too long code but currently I can't do anything
   componentDidMount() {
     axios
     .get(`${api_url}${api_key}`)
@@ -30,46 +30,50 @@ class HomePage extends React.Component {
         listOfVid: response.data
       })
       //Maybe here put if (!this.props.match.params.currentVidId) {} 
-      axios
-      .get(`${api_url}${response.data[0].id}${api_key}`)
-      .then(output => {
-        console.log('Current vid full description***: ', output)
-        this.setState({
-          currentVidId: output.data.id,
-          currentVid: output.data,
-          currentVidComments: output.data.comments
+      console.log('Look at current link:', this.props.match)          //Delete before submission
+      if(!this.props.match.params.currentVidId) {
+        axios
+        .get(`${api_url}${response.data[0].id}${api_key}`)
+        .then(output => {
+          console.log('Current vid full description***: ', output)
+          this.setState({
+            currentVidId: output.data.id,
+            currentVid: output.data,
+            currentVidComments: output.data.comments
+          })
         })
-      })
+      } else {
+        axios
+        .get(`${api_url}${this.props.match.params.currentVidId}${api_key}`)
+        .then(outcome => {
+          this.setState({
+            currentVidId: outcome.data.id,
+            currentVid: outcome.data,
+            currentVidComments: outcome.data.comments
+          })
+        })
+      }
     })
   }
 
-  /* componentDidUpdate(prevProps) {
+  componentDidUpdate(prevProps) {
     
     console.log('PrevProps params ID', prevProps.match.params.currentVidId);
-    console.log('CurrentProps params ID', this.props.match.params.currentVidId); 
-    
-    if ((typeof prevProps.match.params.currentVidId != 'undefined') &&
-        (typeof this.props.match.params.currentVidId != 'undefined')) {
-          console.log('WTF inside??? ', {api_url}+"/"+ {currentVidId} + {api_key})
-          if (prevProps.match.params.currentVidId !== this.props.match.params.currentVidId) {
-            
-            axios
-            .get(`${api_url}/${this.state.match.params.currentVidId}${api_key}`)
-            .then(response => {
-              const currentVidId = response.data.id; 
-              const currentVid = response.data;
-              const currentVidComments = response.data.comments;
-            
-              this.setState({
-                currentVidId: currentVidId,
-                currentVid: currentVid,
-                currentVidComments: currentVidComments
-              })
-            })
-          }
-        }
-    
-  }  */ 
+    console.log('CurrentProps params ID', this.props.match.params.currentVidId);
+          
+    if (prevProps.match.params.currentVidId !== this.props.match.params.currentVidId) {
+      console.log('!!!Success is near here!!!')
+      axios
+      .get(`${api_url}${this.props.match.params.currentVidId}${api_key}`)
+      .then(response => {
+        this.setState({
+          currentVidId: response.data.id,
+          currentVid: response.data,
+          currentVidComments: response.data.comments
+        })
+      })
+    }
+  }  
   
   render() {
     
