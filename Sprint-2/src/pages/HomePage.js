@@ -6,7 +6,7 @@ import CommentInput from '../components/CommentInput';
 import Comments from '../components/Comments'
 import VidList from '../components/VidList';
 import axios from 'axios';
-import { typeOf } from 'prismic-reactjs';
+
 
 const api_url = 'https://project-2-api.herokuapp.com/videos/';
 const api_key = '?api_key=5ed7aad8-dec9-446e-9ecc-937573ff8afb';  
@@ -23,6 +23,7 @@ class HomePage extends React.Component {
   }
 
   componentDidMount() {
+    console.log('Link to the page: ', this.props.match)
     axios
     .get(`${api_url}${api_key}`)
     .then(response => {
@@ -56,6 +57,7 @@ class HomePage extends React.Component {
   // }
 
   render() {
+    let restListOfVid = this.state.listOfVid.filter(vid => vid.id != this.state.currentVidId)
     return (
       <div>
         <Header />
