@@ -52,9 +52,9 @@ class HomePage extends React.Component {
     })
   }
 
-  // componentDidUpdate(prevProps, prevState) {
-
-  // }
+  componentDidUpdate(prevProps, prevState) {
+    
+  }
 
   render() {
     
