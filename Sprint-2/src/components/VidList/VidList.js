@@ -6,8 +6,8 @@ const VidList = ({listOfVid}) => {
   
   const array = listOfVid.map(vid => {
     return (
-      <Link to={"/"+vid.id}>
-        <section className="video" key={vid.id}>
+      <Link to={"/"+vid.id} key={vid.id}>
+        <section className="video">
           <img className="video__img" src={vid.image} alt={vid.image}></img>
           <div className="video__text">
             <span className="video__text-title">{vid.title}</span>

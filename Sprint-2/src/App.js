@@ -10,10 +10,11 @@ class App extends React.Component {
     return (
       <BrowserRouter>
         <Switch>
-          <Route path="/" exact component={HomePage} />
-          <Route path="/home" component={HomePage} />
-          <Route path="/:currentVidId" component={HomePage} />
+          <Route exact path="/" component={HomePage} />
           <Route path="/upload" component={UploadPage} />
+          {/* <Route path="/home" component={HomePage} /> */}
+          <Route path="/:currentVidId" component={HomePage} />
+          
         </Switch>
       </BrowserRouter>
     )
