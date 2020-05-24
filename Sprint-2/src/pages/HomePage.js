@@ -57,7 +57,9 @@ class HomePage extends React.Component {
   // }
 
   render() {
+    
     let restListOfVid = this.state.listOfVid.filter(vid => vid.id != this.state.currentVidId)
+    
     return (
       <div>
         <Header />
@@ -69,7 +71,7 @@ class HomePage extends React.Component {
         </div>
         <aside>
           <div className="video-list__header">NEXT VIDEO</div>
-          <VidList listOfVid={this.state.listOfVid}/>
+          <VidList listOfVid={restListOfVid}/>
         </aside>
       </div> 
     )
