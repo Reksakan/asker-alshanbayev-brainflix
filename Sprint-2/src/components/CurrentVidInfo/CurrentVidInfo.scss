@@ -3,6 +3,7 @@
 @import '../../partials/fonts.scss';
 
 .description {
+  border: 1px solid lawngreen;;
   @include margins-mobile;
   @include tablet {
     @include margins-tablet;
@@ -12,21 +13,26 @@
   }
   
   &__title {
-  @include flex-col;
-  margin-top: 1red;
-  @include tablet {
-    @include flex-row;
-    align-items: center;
-    justify-content: space-between;
+    border: 1px solid darkblue;
+    @include flex-col;
+    margin-top: 1red;
+    @include tablet {
+      @include flex-row;
+      align-items: center;
+      justify-content: space-between;
+    }
+    @include desktop {
+      width: 42.5rem;
+    }
   }
-  @include desktop {
-    width: 42.5rem;
+  
+  &__date {
+    margin-left: 0.5rem;
   }
-  }
-  // &__author {
-    
-  // }
+
+
   &__status {
+    border: 1px solid navy;
     display: flex;
     height: 1.5rem;
     margin-top: 2rem;
@@ -35,9 +41,11 @@
     }
   }
   &__viewed {
+    border: 1px solid sienna;
     @include flex-align-center;
   }
   &__viewed--margins {
+    margin-left: 0.5rem;
     @include tablet {
       margin-top: 0;
       margin-bottom: 0;
@@ -45,9 +53,13 @@
   }
 
   &__liked {
+    margin-left: 1.5rem;
+    border: 1px solid indianred;
+    
     @include flex-align-center;
   }
   &__text {
+    border: 1px solid hotpink;
     margin-bottom: 2.5rem;
     max-width: 32.5rem;
     @include tablet {

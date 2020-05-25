@@ -13,7 +13,7 @@ const CurrentVidInfo = ({currentVidInfo})=> {
           <article className="description__title">
             <div className="description__author">
               <span>By {currentVidInfo.channel}</span>
-              <span>{(new Intl.DateTimeFormat('en-GB').format(currentVidInfo.timeStamp))}</span> {/* https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat */}
+              <span className="description__date">{(new Intl.DateTimeFormat('en-GB').format(currentVidInfo.timeStamp))}</span> {/* https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat */}
             </div>
             <div className="description__status">
               <span className="description__viewed">

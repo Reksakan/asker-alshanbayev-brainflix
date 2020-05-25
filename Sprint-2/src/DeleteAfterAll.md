@@ -41,3 +41,44 @@ const Comments = ({comments}) => {
 }
 
 export default Comments;
+
+componentDidUpdate(prevProps) {
+    
+    console.log('PrevProps params ID', prevProps.match.params.currentVidId);
+    console.log('CurrentProps params ID', this.props.match.params.currentVidId); 
+    // console.log('WTF inside??? ', {api_url}+"/"+ {this.props.match.params.currentVidId} + {api_key})
+    /* if ((typeof prevProps.match.params.currentVidId != 'undefined') &&
+        (typeof this.props.match.params.currentVidId != 'undefined')) {
+          
+          if (prevProps.match.params.currentVidId !== this.props.match.params.currentVidId) {
+            
+            axios
+            .get(`${api_url}/${this.state.match.params.currentVidId}${api_key}`)
+            .then(response => {
+              const currentVidId = response.data.id; 
+              const currentVid = response.data;
+              const currentVidComments = response.data.comments;
+            
+              this.setState({
+                currentVidId: currentVidId,
+                currentVid: currentVid,
+                currentVidComments: currentVidComments
+              })
+            })
+          }
+        } */
+
+        == Format Date ==
+        <span>{(new Intl.DateTimeFormat('en-GB').format(currentVidInfo.timeStamp))}</span>
+
+        {(new Intl.DateTimeFormat('en-GB').format(comment.timestamp))}
+
+
+@import '../../partials/variables.scss';
+@import '../../partials/mixins.scss';
+@import '../../partials/fonts.scss';
+
+.uploading__container {
+  border: 1px solid saddlebrown;
+  @include margins-mobile;
+}

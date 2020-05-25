@@ -1,4 +1,5 @@
 import React from 'react';
+import './HomePage.scss';
 import Header from '../components/Header';
 import CurrentVid from '../components/CurrentVid';
 import CurrentVidInfo from '../components/CurrentVidInfo';
@@ -10,8 +11,6 @@ import axios from 'axios';
 
 const api_url = 'https://project-2-api.herokuapp.com/videos/';
 const api_key = '?api_key=5ed7aad8-dec9-446e-9ecc-937573ff8afb';  
-
-//All Vids ID: '1af0jruup5gu', '1ainjruutd1j'
 
 class HomePage extends React.Component {
 
@@ -30,12 +29,12 @@ class HomePage extends React.Component {
         listOfVid: response.data
       })
       //Maybe here put if (!this.props.match.params.currentVidId) {} 
-      console.log('Look at current link:', this.props.match)          //Delete before submission
+      console.log('Look at current link:', this.props.match)          //Console should be deleted before submission
       if(!this.props.match.params.currentVidId) {
         axios
         .get(`${api_url}${response.data[0].id}${api_key}`)
         .then(output => {
-          console.log('Current vid full description***: ', output)
+          console.log('Current vid full description***: ', output)    //Console should be deleted before submission
           this.setState({
             currentVidId: output.data.id,
             currentVid: output.data,
@@ -58,11 +57,11 @@ class HomePage extends React.Component {
 
   componentDidUpdate(prevProps) {
     
-    console.log('PrevProps params ID', prevProps.match.params.currentVidId);
-    console.log('CurrentProps params ID', this.props.match.params.currentVidId);
+    console.log('PrevProps params ID', prevProps.match.params.currentVidId);        //Console should be deleted before submission
+    console.log('CurrentProps params ID', this.props.match.params.currentVidId);    //Console should be deleted before submission
           
     if (prevProps.match.params.currentVidId !== this.props.match.params.currentVidId) {
-      console.log('!!!Success is near here!!!')
+      console.log('!!!Success is near here!!!')                                         //Console should be deleted before submission
       axios
       .get(`${api_url}${this.props.match.params.currentVidId}${api_key}`)
       .then(response => {
@@ -83,15 +82,18 @@ class HomePage extends React.Component {
       <div>
         <Header />
         <CurrentVid currentVid={this.state.currentVid} />
-        <div className="main-part__flex">
-          <CurrentVidInfo currentVidInfo={this.state.currentVid} />
-          <CommentInput />
-          <Comments comments={this.state.currentVidComments}/>  
-        </div>
-        <aside>
-          <div className="video-list__header">NEXT VIDEO</div>
-          <VidList listOfVid={restListOfVid}/>
-        </aside>
+        <section className="main-part__flex">
+          <div>
+            <CurrentVidInfo currentVidInfo={this.state.currentVid} />
+            <CommentInput />
+            <Comments comments={this.state.currentVidComments}/>  
+          </div>
+          <aside>
+            <div className="video-list__header">NEXT VIDEO</div>
+            <VidList listOfVid={restListOfVid}/>
+          </aside>
+        </section>
+        
       </div> 
     )
   } 

@@ -1,0 +1,37 @@
+@import '../../partials/variables.scss';
+@import '../../partials/mixins.scss';
+@import '../../partials/fonts.scss';
+
+.upload {
+  &__container {
+    border: 1px solid red;
+    @include margins-mobile; 
+    @include desktop {
+      @include flex-row;
+    }
+  }
+
+  &__section {
+    @include flex-row;
+    border: 1px solid blue;
+  }
+  &__vid {
+    width: 21.5rem;
+  }
+  &__input {
+    @include flex-col;
+    border: 1px solid blue;
+  }
+
+  &__comment-form {
+    @include flex-col;
+  }
+  &__buttons-container {
+    @include flex-row;
+  }
+  &__commitment {
+    border: 1px solid red;
+    @include flex-row;
+  }
+
+}

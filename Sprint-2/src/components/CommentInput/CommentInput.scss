@@ -26,21 +26,20 @@
       margin-top: 0;
     }
   }
+  &__text-title {
+    border: 1px solid red;
+    @include text__title-input;
+  }
   &__input {
+    border: 1px solid blue;
     @include flex-col;
     flex-grow: 1;
     min-width: 13.875rem;
-    
     @include tablet {
       @include flex-row;
     }
   }
-  &__text-title {
-    font-family: 'Avenir';
-    font-size: 0.8rem;
-    color: #AFAFAF;
-    margin-left: 4rem;
-  }
+
 
   &__text-input {
     font-family: 'Avenir';

@@ -91,3 +91,16 @@
   height: 3rem;
   border-radius: 1.5rem;
 }
+
+/* +++ TEXT STYLES +++ */
+
+@mixin text__title-input {
+  font-family: 'Avenir';
+  font-size: 0.8rem;
+  color: #AFAFAF;
+}
+
+@mixin text__title {
+  font-family: 'Avenir';
+  font-size: 0.8rem;
+}
