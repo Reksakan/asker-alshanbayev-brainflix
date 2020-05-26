@@ -3,7 +3,6 @@
 @import '../../partials/fonts.scss';
 
 .video-box {
-  z-index: 0;
   display: flex;
   justify-content: center;
   @include tablet {
@@ -18,7 +17,7 @@
 }
 
 .current-video {
-    width: 100%;
+    width: 20rem;
     height: 11.4375rem;
     z-index: 0;
     @include tablet {
