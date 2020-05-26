@@ -19,11 +19,29 @@ html {
     color: #323232;
 }
 
+@mixin text-author-mobile {
+  font-family: 'Avenir demi';
+  font-size: 1.1rem;
+}
+
+@mixin text-dates-mobile {
+  font-family: 'Avenir';
+  font-size: 0.85rem;
+  color: #AFAFAF;
+}
+
+@mixin text-input-mobile {
+  font-family: 'Avenir';
+  font-size: 0.8rem;
+  border-radius: 0.25rem;
+  padding: 1rem;
+}
+
 // // @include tablet {font-size: 3.75rem;};
 
 // h1 {
 //     font-family: 'Avenir bold', sans-serif;
-//     font-size: 7.5vw;
+//     font-size: 60px;
 //     @include tablet {font-size: $hero-header;};
 //     @include desktop {font-size: $hero-header;};
 // }

@@ -3,22 +3,50 @@
 @import '../../partials/fonts.scss';
 
 .upload {
-  &__container {
-    border: 1px solid red;
-    @include margins-mobile; 
+  &__header {
+    border: 1px solid lightcoral;
+    @include margins-mobile;
+    margin-bottom: 2rem;
+    margin-top: 1.5rem;
+    @include tablet {
+      @include margins-tablet;
+    }
     @include desktop {
-      @include flex-row;
+      @include margins-desktop;
     }
   }
-
+  &__form {
+    border: 1px solid saddlebrown;
+  }
   &__section {
-    @include flex-row;
     border: 1px solid blue;
+    @include flex-col;
+    @include margins-mobile;
+    @include tablet {@include flex-row;}
+  }
+  &__section-header {
+    @include text__title-input;
+    margin-bottom: 0.15px;
+    margin-top: 0; 
+    @include tablet {
+      margin-top: 2.5rem;
+    }
+    
+  }
+  &__video-box {
+    @include flex-col;    
   }
   &__vid {
-    width: 21.5rem;
+    height: 47vw;
+    max-height: 11.4rem;
+    max-width: 21.5rem;
+    @include tablet {
+      height: 23vw;
+    }
+
   }
-  &__input {
+
+  &__sector {
     @include flex-col;
     border: 1px solid blue;
   }
@@ -31,7 +59,48 @@
   }
   &__commitment {
     border: 1px solid red;
-    @include flex-row;
+    display: flex;
+    flex-direction: column-reverse;
+    @include margins-mobile;
   }
+  &__button-publish {
+      font-family: 'Avenir';
+      height: 3rem;
+      background-color: #0095FF;
+      color: white;
+  }
+  &__button-cancel {
+    font-family: 'Avenir';
+    height: 3rem;
+    color: #0095FF;
+    background-color: white;
+    border: 0px solid white;
+  }
+}
 
+.text {
+  &__sector {
+    @include flex-col;
+    height: 100%;
+    border: 1px solid red;
+    margin-top: 2rem;
+  }
+  &__title {
+    @include text__title-input;
+    margin-top: 0;
+    margin-bottom: 0.15rem;
+  }
+  &__title-input {
+    @include text-input-mobile;
+    height: 2rem;
+  }
+  &__description {
+    @include text__title-input;
+    margin-top: 1.5rem;
+    margin-bottom: 0.15rem;
+  }
+  &__description-input {
+    @include text-input-mobile;
+    height: 9rem;
+  }
 }

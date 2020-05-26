@@ -3,37 +3,44 @@
 @import '../../partials/fonts.scss';
 
 .header {
+    border: 1px solid blue;
     @include flex-col; 
     @include margins-mobile;
     align-items: center;
+    height: 10.5625rem;
     @include tablet {
-      @include margins-tablet;
       @include flex-row;
+      justify-content: space-between;
+      height: 5rem;
+      @include margins-tablet;
     }
     @include desktop {
       @include margins-desktop;
     }
     &__search {
+      border: 1px solid red;
+      width: 18rem;
       @include tablet {
         @include flex-row;
         align-items: center;
+        width: 28.3rem;
       }
     }
 
     &__logo {
-        margin: 0.75rem 0;
-        @include tablet {
-          margin-right: 10.5625rem;
-        }
+      border: 1px solid red;  
+      margin: 0.55rem 0;
         @include desktop {
           margin-right: 31.8125rem;
         }
     }
+
     &__search-input {
-        width: 18rem;
-        height: 3rem;
+        width: 97.5%;
+        height: 2.7rem;
         border-radius: 0.25rem;
         @include tablet {
+          margin-right: 1.5rem;
           width: 15.5rem;
         }
         @include desktop {
@@ -57,7 +64,7 @@
         margin-right: 1.5rem;
       }
     }
-    &__avatar {
+    &__ava {
         @include avatar-mobile1;
     }
 }

@@ -46,7 +46,7 @@ class HomePage extends React.Component {
         .get(`${api_url}${this.props.match.params.currentVidId}${api_key}`)
         .then(outcome => {
           this.setState({
-            currentVidId: outcome.data.id,
+            /* currentVidId: outcome.data.id, */
             currentVid: outcome.data,
             currentVidComments: outcome.data.comments
           })
@@ -86,10 +86,12 @@ class HomePage extends React.Component {
           <div>
             <CurrentVidInfo currentVidInfo={this.state.currentVid} />
             <CommentInput />
-            <Comments comments={this.state.currentVidComments}/>  
+            <div className="comment-body">
+              <Comments comments={this.state.currentVidComments}/>  
+            </div>
           </div>
-          <aside>
-            <div className="video-list__header">NEXT VIDEO</div>
+          <aside className="vid-list__body">
+            <div className="vid-list__header">NEXT VIDEO</div>
             <VidList listOfVid={restListOfVid}/>
           </aside>
         </section>

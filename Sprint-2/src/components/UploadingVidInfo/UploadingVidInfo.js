@@ -6,24 +6,24 @@ class UploadingVidInfo extends React.Component {
   render() {
     return (
       <>
-        <h2>Upload Video</h2>
+        <h2 className="upload__header">Upload Video</h2>
         <form className="upload__form" id="commentsForm">    
           <section className="upload__section">
-            <div>
-              <h3>VIDEO THUMBNAIL</h3>
+            <div className="upload__video-box">
+              <h3 className="upload__section-header">VIDEO THUMBNAIL</h3>
               <img className="upload__vid" src={bike}></img>
             </div>
-            <div className="upload__input">    
-              <h3>TITLE YOUR VIDEO</h3>
-              <textarea className="upload__text-title" name="titleInput" placeholder="Add a title to your video" required></textarea>
-              <h3>ADD A VIDEO DESCRIPTION</h3>
-              <textarea className="upload__text-description" name="textInput" placeholder="Add a description of your video" required></textarea>
+            <div className="text__sector">    
+              <h3 className="text__title">TITLE YOUR VIDEO</h3>
+              <textarea className="text__title-input" name="titleInput" placeholder="Add a title to your video" required></textarea>
+              <h3 className="text__description">ADD A VIDEO DESCRIPTION</h3>
+              <textarea className="text__description-input" name="textInput" placeholder="Add a description of your video" required></textarea>
             </div>
           </section>
             
           <div className="upload__commitment">
-            <button type="submit" className="comment__signUpBtn" id="signUpBtn">CANCEL</button>
-            <button type="submit" className="comment__signUpBtn" id="signUpBtn">PUBLISH</button>
+            <button type="submit" className="upload__button-cancel" id="signUpBtnCancel">CANCEL</button>
+            <button type="submit" className="upload__button-publish" id="signUpBtnPublish">PUBLISH</button>
           </div>
         </form>
       </>

@@ -20,7 +20,7 @@ class Header extends React.Component {
             <Link to="/upload">
               <button className="header__upload-button"> + UPLOAD</button>
             </Link>
-            <img className="header__avatar" src={avatar} alt="userAvatar"></img>
+            <img className="header__ava" src={avatar} alt="userAvatar"></img>
           </div>
         </form>
       </div>

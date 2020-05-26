@@ -3,22 +3,31 @@
 @import '../../partials/fonts.scss';
 
 .video-box {
-  @include desktop {
+  display: flex;
+  justify-content: center;
+  @include tablet {
     width: 100%;
     background-color: black;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  @include desktop {
+    margin-bottom: 0;
+    margin-left: 0;
   }
 }
 
 .current-video {
-    border: 1px solid firebrick;
-    display: flex;
+    border: 3px solid blue;
     width: 100%;
-    height: 57.188vw;
+    @include tablet {
+      width: 43.75rem;
+    }
     @include desktop {
-      width: 944px;
-      height: 540px;
-      margin-left: 244px;
-      margin-right: 244px;
+      width: 59rem;
+      
+      // margin-left: 244px;
+      // margin-right: 244px;
     }
 }
 

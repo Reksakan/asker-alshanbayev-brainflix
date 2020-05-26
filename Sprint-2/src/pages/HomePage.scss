@@ -2,19 +2,46 @@
 @import '../partials/mixins.scss';
 @import '../partials/fonts.scss';
 
-.video-list__header {
-  margin: 1.5rem auto 2.5rem 1rem;
-  @include tablet {
-    margin: 1.5rem auto 2.5rem 1.5rem;
-  }
+.comment-body {
   @include desktop {
-    margin-left: 1.5rem;
+    border: 1px solid black;
+    width: 44.5rem;
+  }
+}
+.vid-list {
+  &__body {
+    border: 1px solid blueviolet;
+    @include margins-mobile;
+    @include tablet {
+      @include margins-tablet;
+    }
+    @include desktop {
+      width: 21.5rem;
+      margin-top: 2.5rem;
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+  &__header {
+    border: 1px solid red;
+    margin: 1.5rem 0 2.5rem 0;
+    @include tablet {
+      margin: 1.5rem 0 2.5rem 0;
+    }
+    @include desktop {
+      margin-top: 0;
+      margin-left: 0rem;
+      margin-bottom: 2.5rem;
+    }
   }
 }
 
 .main-part__flex {
+  border: 2px solid forestgreen;
   @include desktop {
     @include flex-row;
-
+    @include desktop {
+      @include margins-desktop;
+    }
   }
 }
