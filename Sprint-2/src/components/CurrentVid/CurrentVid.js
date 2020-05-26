@@ -1,6 +1,7 @@
 import React from 'react';
 import './CurrentVid.scss';
-import playingnow from '../../assets/Video/BrainStation Sample Video.mp4';
+import play from '../../assets/Icons/PNG/Icon-play.png';
+import pause from '../../assets/Icons/SVG/Icon-pause.svg';
 
 const CurrentVid = ({currentVid}) => {
   console.log('CurrentVid passes twice, why??!!!!!!!!!!!!!!!!!!!!!!!!!!!!  ', currentVid)
@@ -12,6 +13,9 @@ const CurrentVid = ({currentVid}) => {
         <video controls className="current-video" poster={currentVid.image}>
           <source src={currentVid.image} type="video/mp4"></source>
         </video>
+        {/* <img className="button__play" src={play} alt="play" />
+        <div className="button__play-back"> </div> */}
+       
       </div>
         
     );

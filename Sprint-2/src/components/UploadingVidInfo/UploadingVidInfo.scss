@@ -4,7 +4,6 @@
 
 .upload {
   &__header {
-    border: 1px solid lightcoral;
     @include margins-mobile;
     margin-bottom: 2rem;
     margin-top: 1.5rem;
@@ -17,11 +16,7 @@
       @include margins-desktop;
     }
   }
-  &__form {
-    border: 1px solid saddlebrown;
-  }
   &__section {
-    border: 1px solid blue;
     @include flex-col;
     @include margins-mobile;
     @include tablet {
@@ -63,7 +58,6 @@
 
   &__sector {
     @include flex-col;
-    border: 1px solid blue;
     @include desktop {
 
     }
@@ -76,7 +70,6 @@
     @include flex-row;
   }
   &__commitment {
-    border: 1px solid red;
     display: flex;
     flex-direction: column-reverse;
     @include margins-mobile;
@@ -111,7 +104,6 @@
   &__sector {
     @include flex-col;
     height: 100%;
-    border: 1px solid red;
     margin-top: 2rem;
     @include tablet {
       margin-top: 2.5rem;

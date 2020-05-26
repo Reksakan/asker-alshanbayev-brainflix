@@ -4,13 +4,11 @@
 
 .comment-body {
   @include desktop {
-    border: 1px solid black;
     width: 44.5rem;
   }
 }
 .vid-list {
   &__body {
-    border: 1px solid blueviolet;
     @include margins-mobile;
     @include tablet {
       @include margins-tablet;
@@ -23,7 +21,6 @@
     }
   }
   &__header {
-    border: 1px solid red;
     margin: 1.5rem 0 2.5rem 0;
     @include tablet {
       margin: 1.5rem 0 2.5rem 0;
@@ -37,7 +34,6 @@
 }
 
 .main-part__flex {
-  border: 2px solid forestgreen;
   @include desktop {
     @include flex-row;
     @include desktop {

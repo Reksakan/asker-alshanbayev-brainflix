@@ -3,7 +3,6 @@
 @import '../../partials/fonts.scss';
 
 .header {
-    border: 1px solid blue;
     @include flex-col; 
     @include margins-mobile;
     align-items: center;
@@ -18,7 +17,6 @@
       @include margins-desktop;
     }
     &__search {
-      border: 1px solid red;
       width: 18rem;
       @include tablet {
         @include flex-row;
@@ -31,7 +29,6 @@
     }
 
     &__logo {
-      border: 1px solid red;  
       margin: 0.55rem 0;
         @include desktop {
           margin-right: 31.8125rem;

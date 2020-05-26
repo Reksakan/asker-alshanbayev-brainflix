@@ -3,7 +3,6 @@
 @import '../../partials/fonts.scss';
 
 .comment-single {
-  border: 1px solid red;
   border-top: 1px solid #e1e1e1;
   border-bottom: 1px solid #e1e1e1;
   
@@ -29,7 +28,6 @@
 }
 
 .comment__text-header {
-  border: 1px solid blue;
   @include flex-row;
   justify-content: space-between;
   width: 100%;
@@ -41,7 +39,6 @@
 }
 
 .comment__text-user {
-  border: 1px solid blueviolet;
   align-self: center;
   font-family: 'Avenir';
   font-size: 0.8rem;
@@ -55,7 +52,6 @@
 }
 
 .comment__text-date {   
-  border: 1px solid blueviolet;
   align-self: center;
   @include text__title;
   color: #AFAFAF;
@@ -65,7 +61,6 @@
 }
 
 .comment__text-box {
-  border: 1px solid chocolate;
   width: 69.375vw;
   height: auto;
   padding-right: 0;

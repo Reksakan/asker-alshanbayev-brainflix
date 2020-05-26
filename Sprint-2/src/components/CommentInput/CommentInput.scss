@@ -13,12 +13,10 @@
   }
 }
 .comment {
-  border: 1px solid blue;
   @include text-author-mobile; 
   margin-bottom: 2rem;
   
   &__form {
-  border: 1px solid red;
     @include flex-row;
     @include tablet {
       height: 3rem;
@@ -33,12 +31,10 @@
     }
   }
   &__text-title {
-    border: 1px solid red;
     @include text__title-input;
     margin-left: 3.7rem;
   }
   &__input {
-    border: 1px solid blue;
     @include flex-col;
     height: 100%;
     flex-grow: 1;

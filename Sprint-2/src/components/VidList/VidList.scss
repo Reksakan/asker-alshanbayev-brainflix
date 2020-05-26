@@ -3,7 +3,6 @@
 @import '../../partials/fonts.scss';
 
 .video {
-  border: 1px solid darkblue;
   @include flex-relative();
   max-width: 23.75rem;
   height: 4.375rem;
@@ -20,12 +19,10 @@
     margin-right: 1rem;
   }
   &__text {
-    border: 1px solid darkcyan;
     @include flex-col;
     margin-right: 0;
   }  
   &__text-title {
-    border: 1px solid cadetblue;
     font-family: 'Avenir demi';
     font-size: 0.8rem;
     margin-bottom: 1rem;
