@@ -25,6 +25,9 @@
         align-items: center;
         width: 28.3rem;
       }
+      @include desktop {
+        width: 28rem;
+      }
     }
 
     &__logo {
@@ -39,6 +42,7 @@
         width: 97.5%;
         height: 2.7rem;
         border-radius: 0.25rem;
+        background-color: #fafafa;
         @include tablet {
           margin-right: 1.5rem;
           width: 15.5rem;

@@ -20,11 +20,14 @@
 .current-video {
     border: 3px solid blue;
     width: 100%;
+    height: 11.4375rem;
     @include tablet {
       width: 43.75rem;
+      height: 25rem;
     }
     @include desktop {
       width: 59rem;
+      height: 33.75rem;
       
       // margin-left: 244px;
       // margin-right: 244px;

@@ -72,7 +72,14 @@
   border-radius: 0.25rem;
   color: #ffffff; 
   background-color: #0095FF;
+}
 
+@mixin button-mobile-upload {
+  font-family: 'Avenir';
+  height: 3rem;
+  background-color: #0095FF;
+  color: white;
+  border-radius: 0.25rem;
 }
 
 @mixin avatar-mobile {
