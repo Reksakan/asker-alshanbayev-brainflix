@@ -1,0 +1,141 @@
+@import '../../../../partials/variables';
+@import '../../../../partials/mixins';
+@import '../../../../partials/fonts';
+
+.upload {
+  &__header {
+    @include margins-mobile;
+    margin-bottom: 2rem;
+    margin-top: 1.5rem;
+    @include tablet {
+      @include margins-tablet;
+      font-size: 2.5rem;
+      margin-top: 3rem;
+    }
+    @include desktop {
+      @include margins-desktop;
+    }
+  }
+  &__section {
+    @include flex-col;
+    @include margins-mobile;
+    @include tablet {
+      @include flex-col;
+      @include margins-tablet;
+    @include desktop {
+      @include flex-row;
+      @include margins-desktop;
+      height: 100%;
+
+
+      
+    }}
+  }
+  &__section-header {
+    @include text__title-input;
+    margin-bottom: 0.15px;
+    margin-top: 0; 
+    @include tablet {
+      margin-top: 2.5rem;
+    }
+    
+  }
+  &__video-box {
+    @include flex-col;    
+  }
+  &__vid {
+    height: 47vw;
+    max-height: 11.4rem;
+    max-width: 21.5rem;
+    @include tablet {
+      height: 23vw;
+    }
+    @include desktop {
+      margin-right: 1.5rem;
+    }
+
+  }
+
+  &__sector {
+    @include flex-col;
+    @include desktop {
+
+    }
+  }
+
+  &__comment-form {
+    @include flex-col;
+  }
+  &__buttons-container {
+    @include flex-row;
+  }
+  &__commitment {
+    display: flex;
+    flex-direction: column-reverse;
+    @include margins-mobile;
+    @include tablet {
+      @include flex-row;
+      justify-content: flex-end;
+      @include margins-tablet;
+      margin-top: 2.5rem;
+    }
+    @include desktop {
+      @include margins-desktop;
+    }
+  }
+  &__button-publish {
+      @include button-mobile-upload;
+      @include tablet {
+        width: 10rem;
+      }
+  }
+  &__button-cancel {
+    @include button-mobile-upload;
+    color: #0095FF;
+    background-color: white;
+    border: 0px solid white;
+    @include tablet {
+      width: 10rem;
+    }
+  }
+}
+
+.text {
+  &__sector {
+    @include flex-col;
+    height: 100%;
+    margin-top: 2rem;
+    @include tablet {
+      margin-top: 2.5rem;
+    }
+    @include desktop {
+      width: 100%;
+    }
+  }
+  &__title {
+    @include text__title-input;
+    margin-top: 0;
+    margin-bottom: 0.15rem;
+  }
+  &__title-input {
+    @include text-input-mobile;
+    background-color: #fafafa;
+    height: 2rem;
+    @include desktop {
+      height: 1.5rem;
+    }
+  }
+  &__description {
+    @include text__title-input;
+    margin-top: 1.5rem;
+    margin-bottom: 0.15rem;
+  }
+  &__description-input {
+    @include text-input-mobile;
+    background-color: #fafafa;
+    height: 9rem;
+    @include desktop {
+      height: 2.8rem;
+    }
+  }
+}

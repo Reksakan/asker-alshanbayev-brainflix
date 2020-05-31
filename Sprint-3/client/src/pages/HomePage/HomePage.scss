@@ -1,0 +1,43 @@
+@import '../../partials/variables.scss';
+@import '../../partials/mixins.scss';
+@import '../../partials/fonts.scss';
+
+.comment-body {
+  @include desktop {
+    width: 44.5rem;
+  }
+}
+.vid-list {
+  &__body {
+    @include margins-mobile;
+    @include tablet {
+      @include margins-tablet;
+    }
+    @include desktop {
+      width: 21.5rem;
+      margin-top: 2.5rem;
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+  &__header {
+    margin: 1.5rem 0 2.5rem 0;
+    @include tablet {
+      margin: 1.5rem 0 2.5rem 0;
+    }
+    @include desktop {
+      margin-top: 0;
+      margin-left: 0rem;
+      margin-bottom: 2.5rem;
+    }
+  }
+}
+
+.main-part__flex {
+  @include desktop {
+    @include flex-row;
+    @include desktop {
+      @include margins-desktop;
+    }
+  }
+}

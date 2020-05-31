@@ -1,0 +1,67 @@
+@import '../../../../partials/variables';
+@import '../../../../partials/mixins.scss';
+@import '../../../../partials/fonts.scss';
+
+.comment-section {
+  margin: 2.5rem 1rem 1.5rem 1rem;
+  @include tablet {
+    margin: 2.5rem 1.5rem 2rem 1.5rem;
+  }
+  @include desktop {
+    width: 44.5rem;
+    margin-left: 0;
+  }
+}
+.comment {
+  @include text-author-mobile; 
+  margin-bottom: 2rem;
+  
+  &__form {
+    @include flex-row;
+    @include tablet {
+      height: 3rem;
+    }
+  }
+  &__avatar {
+    @include avatar-mobile;
+    margin-top: 1rem;
+    margin-right: 1rem;
+    @include desktop {
+      
+    }
+  }
+  &__text-title {
+    @include text__title-input;
+    margin-left: 3.7rem;
+  }
+  &__input {
+    @include flex-col;
+    height: 100%;
+    flex-grow: 1;
+    min-width: 13.875rem;
+    @include tablet {
+      @include flex-row;
+    }
+  }
+
+  &__text-input {
+    @include text-input-mobile;
+    height: 6rem;
+      @include tablet {
+        width: 57vw;
+        height: auto;
+        margin-right: 1rem;
+      }
+      @include desktop {
+        width: 30vw;
+      }
+    &:focus {border: 2.5px solid #0095FF;}
+  }
+  &__signUpBtn {
+    @include button-mobile;
+    @include tablet {
+      @include button-tablet;
+    }
+    
+  }
+}

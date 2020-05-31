@@ -1,0 +1,136 @@
+@font-face {
+    font-family: 'Avenir';
+    src: url('../assets/_Global-Font/AvenirNextProLT/Linotype-AvenirNextLTPro-Regular.otf'); //LinotypeAvenirNextLTProRegular.otf
+}
+
+@font-face {
+    font-family: 'Avenir bold';
+    src: url('../assets/_Global-Font/AvenirNextProLT/Linotype-AvenirNextLTPro-Bold.otf');    //LinotypeAvenirNextLTProBold.otf
+}
+
+@font-face {
+    font-family: 'Avenir demi';
+    src: url('../assets/_Global-Font/AvenirNextProLT/Linotype-AvenirNextLTPro-Demi.otf');     //LinotypeAvenirNextLTProDemi.otf
+}
+
+html {
+    font-size: 16px;
+    font-family: 'Avenir';
+    color: #323232;
+}
+
+@mixin text-author-mobile {
+  font-family: 'Avenir demi';
+  font-size: 1.1rem;
+}
+
+@mixin text-dates-mobile {
+  font-family: 'Avenir';
+  font-size: 0.85rem;
+  color: #AFAFAF;
+}
+
+@mixin text-input-mobile {
+  font-family: 'Avenir';
+  font-size: 0.8rem;
+  border-radius: 0.25rem;
+  padding: 1rem;
+}
+
+// // @include tablet {font-size: 3.75rem;};
+
+// h1 {
+//     font-family: 'Avenir bold', sans-serif;
+//     font-size: 60px;
+//     @include tablet {font-size: $hero-header;};
+//     @include desktop {font-size: $hero-header;};
+// }
+
+// h2 {
+//     font-family: 'Avenir bold', sans-serif;
+//     font-size: 1.5rem;
+//     @include tablet {font-size: 2rem};
+//     @include desktop {font-size: 2rem;}; 
+// }
+
+// h3 {
+//     // font-family: 'Avenir demi', sans-serif;
+//     font-size: 1rem;
+//     @include tablet {font-size: 1.75rem;};
+//     @include desktop {font-size: 1.75rem;};
+// }
+
+// h4 {
+//     font-family: 'Avenir demi', sans-serif;
+//     font-size: 0.85rem;
+//     @include tablet {font-size: 0.95rem;};
+//     @include desktop {font-size: 1.1rem;};
+// }
+
+// li {
+//     font-size: 1rem;
+// }
+
+// @mixin heading-mobile {
+//     font-family: 'Avenir demi', sans-serif;
+//     font-size: 1.2rem;
+// }
+
+// @mixin author-mobile {
+//     font-family: 'Avenir demi', sans-serif;
+//     font-size: 1rem;
+// }
+
+// @mixin heading-tablet {
+//     font-family: 'Avenir bold', sans-serif;
+//     font-size: 1.2rem;
+// }
+
+// @mixin author-tablet {
+//     font-family: 'Avenir bold', sans-serif;
+//     font-size: 1rem;
+// }
+
+// @mixin heading-desktop {
+//     font-family: 'Avenir bold', sans-serif;
+//     font-size: 1.2rem;
+// }
+
+// @mixin author-desktop {
+//     font-family: 'Avenir bold', sans-serif;
+//     font-size: 1rem;
+// }
+
+// @mixin music-text--mobile {
+//     font-family: 'Avenir', sans-serif;
+//     font-size: 0.74rem;
+// }
+
+// @mixin music-text--tablet {
+//     font-family: 'Avenir', sans-serif;
+//     font-size: 1.1rem;
+// }
+
+// @mixin music-text--desktop {
+//     font-family: 'Avenir', sans-serif;
+//     font-size: 1.1rem;
+// }
+
+// @mixin ground-text--desktop {
+//     font-size: 0.75rem;
+// }
+
+
+// /* Shows page */
+
+// @mixin cover-text--mobile {
+//     font-family: 'Avenir demi', sans-serif;
+//     font-size: 0.8rem;
+//     color: white;
+// }
+
+// @mixin cover-text--tablet {
+//     font-family: 'Avenir bold', sans-serif;
+//     font-size: 1.5rem;
+//     color: white;
+// }

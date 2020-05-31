@@ -1,0 +1,79 @@
+@import '../../../../partials/variables.scss';
+@import '../../../../partials/mixins.scss';
+@import '../../../../partials/fonts.scss';
+
+.header {
+    @include flex-col; 
+    @include margins-mobile;
+    align-items: center;
+    height: 10.5625rem;
+    @include tablet {
+      @include flex-row;
+      justify-content: space-between;
+      height: 5rem;
+      @include margins-tablet;
+    }
+    @include desktop {
+      @include margins-desktop;
+    }
+    &__search {
+      width: 18rem;
+      @include tablet {
+        @include flex-row;
+        align-items: center;
+        width: 28.3rem;
+      }
+      @include desktop {
+        width: 28rem;
+      }
+    }
+
+    &__logo {
+      margin: 0.55rem 0;
+        @include desktop {
+          margin-right: 31.8125rem;
+        }
+    }
+
+    &__search-input {
+        width: 97.5%;
+        height: 2.7rem;
+        border-radius: 0.25rem;
+        background-color: #fafafa;
+        @include tablet {
+          margin-right: 1.5rem;
+          width: 15.5rem;
+        }
+        @include desktop {
+          margin-right: 1.5rem;
+        }
+        
+    }
+    &__upload {
+        @include flex-row;
+        margin: 0.5rem 0 1rem 0rem;
+        @include tablet {
+          margin-top: 0;
+          margin-bottom: 0;
+        }
+    }
+    &__upload-button {
+      @include button-mobile;  
+      margin-right: 1rem;
+      @include tablet {
+        width: 6.25rem;
+        margin-right: 1.5rem;
+      }
+    }
+    &__ava {
+        @include avatar-mobile1;
+    }
+}
+
+.search {
+    @include flex-col;
+    @include tablet {
+      @include flex-row;
+    }
+
+}

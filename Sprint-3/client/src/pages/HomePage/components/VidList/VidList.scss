@@ -1,0 +1,41 @@
+@import '../../../../partials/fonts';
+@import '../../../../partials/mixins';
+@import '../../../../partials/fonts';
+
+.video {
+  @include flex-relative();
+  max-width: 23.75rem;
+  height: 4.375rem;
+  margin-bottom: 1.5rem;
+  @include tablet {
+    margin: 0 0 1.5rem 0rem;
+  }
+  @include desktop {
+    width: auto;
+  }
+  
+  &__img {
+    width: 7.5rem;
+    margin-right: 1rem;
+    border-radius: 0.25rem;
+  }
+  &__text {
+    @include flex-col;
+    margin-right: 0;
+  }  
+  &__text-title {
+    font-family: 'Avenir demi';
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+    width: auto;
+    @include desktop {
+      margin-bottom: auto;
+    }
+  }
+  &__text-author {
+    @extend .video__text-title;
+    font-family: 'Avenir'; 
+    width: auto;
+  }
+  
+  }

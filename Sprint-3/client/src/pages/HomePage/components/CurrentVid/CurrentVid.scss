@@ -1,0 +1,56 @@
+@import '../../../../partials/variables.scss';
+@import '../../../../partials/mixins.scss';
+@import '../../../../partials/fonts.scss';
+
+.video-box {
+  display: flex;
+  justify-content: center;
+  @include tablet {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  @include desktop {
+    margin-bottom: 0;
+    margin-left: 0;
+  }
+}
+
+.current-video {
+    width: 20rem;
+    height: 11.4375rem;
+    z-index: 0;
+    @include tablet {
+      width: 43.75rem;
+      height: 25rem;
+    }
+    @include desktop {
+      width: 59rem;
+      height: 33.75rem;
+      
+      // margin-left: 244px;
+      // margin-right: 244px;
+    }
+}
+
+// .button {
+//   &__play {
+//     position: absolute;
+//     height: 1.8rem;
+//     width: 1.2rem;
+//     top: 420px;
+//     left: 325px;
+//     z-index: 7;
+//   }  
+//   &__play-back {
+//     position: absolute;
+//     background-color: black;
+//     opacity: 0.5;
+//     height: 2.5rem;
+//     width: 3rem;
+//     z-index: 6;
+//     top: 415px;
+//     left: 310px;
+//   }   
+// }
+

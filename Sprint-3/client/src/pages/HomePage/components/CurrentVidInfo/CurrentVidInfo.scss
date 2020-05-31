@@ -1,0 +1,75 @@
+@import '../../../../partials/variables.scss';
+@import '../../../../partials/mixins.scss';
+@import '../../../../partials/fonts.scss';
+
+.description {
+  @include margins-mobile;
+  @include tablet {
+    @include margins-tablet;
+  }
+  @include desktop {
+    width: 44.5rem;
+    margin-left: 0;
+  }
+  &__header {
+    font-size: 24px;
+    @include tablet {
+      font-size: 36px;
+    }
+  } 
+  &__title {
+    @include flex-col;
+    margin-top: 1red;
+    @include tablet {
+      @include flex-row;
+      align-items: center;
+      justify-content: space-between;
+    }
+    @include desktop {
+      width: 42.5rem;
+    }
+  }
+  &__author {
+    @include text-author-mobile;
+  }
+
+  &__date {
+    @include text-dates-mobile;
+    margin-left: 0.5rem;
+  }
+
+
+  &__status {
+
+    display: flex;
+    height: 1.5rem;
+    margin-top: 2rem;
+    @include tablet {
+      margin-top: 0;
+    }
+  }
+  &__viewed {
+
+    @include flex-align-center;
+  }
+  &__viewed--margins {
+    margin-left: 0.5rem;
+    @include tablet {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  &__liked {
+    margin-left: 1.5rem;
+    @include flex-align-center;
+  }
+  &__text {
+    margin-bottom: 2.5rem;
+    max-width: 32.5rem;
+    @include tablet {
+      max-width: 68vw;
+      margin-bottom: 3.0625rem;
+    }
+  }
+}
