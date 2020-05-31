@@ -6,7 +6,6 @@ import CurrentVidInfo from '../../pages/HomePage/components/CurrentVidInfo';
 import CommentInput from '../../pages/HomePage/components/CommentInput';
 import Comments from '../../pages/HomePage/components/Comments'
 import VidList from '../../pages/HomePage/components/VidList';
-import UploadingVidInfo from '../UploadPage/components/UploadingVidInfo/';
 import axios from 'axios';
 
 
@@ -23,7 +22,7 @@ class HomePage extends React.Component {
   }
   //Too long code but currently I can't do anything
   componentDidMount() {
-    
+
     axios
     .get(`${API_URLS}`)
     .then(response => {
@@ -44,7 +43,7 @@ class HomePage extends React.Component {
       }, console.log('output.data',output.data))        //удалить не забудь! 
     })
   }
-     
+
   componentDidUpdate(prevProps){
 
       // make a condition to say that if the video Id is defined 
@@ -60,6 +59,9 @@ class HomePage extends React.Component {
           currentVidComments: output.data[0].comments
         })
     })
+    // .catch(error =>{
+    //   console.error(err);
+    // })
   }
 
   if (!this.props.match.params.currentVidId){
@@ -72,6 +74,9 @@ class HomePage extends React.Component {
           currentVidComments: output.data[0].comments
         })
     })
+    // .catch(error =>{
+    //   console.error(err);
+    // })
   }
 }
 

@@ -15,7 +15,7 @@ router.get('/:currentVidId', (request, response) => {
 router.post('/', (request, response) => {
     console.log('New Vid Description: ', request.body) 
     const newVidDesc = request.body;
-    listOfVideosDesc.unshift(newVidDesc);
+    listOfVideosDesc.push(newVidDesc);
 });
 
 module.exports = router; 
