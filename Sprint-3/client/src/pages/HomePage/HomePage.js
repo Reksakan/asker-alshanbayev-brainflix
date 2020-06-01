@@ -34,13 +34,11 @@ class HomePage extends React.Component {
     axios
     .get(`${API_URLS}/videos/`)
     .then(output => {
-      // console.log('Current vid data: ', output.data);
-      // console.log('Current vid data[0]: ', output.data[0]);
       this.setState({
         currentVidId: output.data[0].id,
         currentVid: output.data[0],
         currentVidComments: output.data[0].comments
-      }, console.log('output.data',output.data))        //удалить не забудь! 
+      }, console.log('Data which goes to the State in componentDidMount',output.data))         
     })
   }
 
@@ -79,14 +77,6 @@ class HomePage extends React.Component {
     // })
   }
 }
-
-// handleVidPublish = vidToSubmit => {
-//   console.log('vidToSubmit', vidToSubmit);
-  
-//   axios
-//   .post(`${API_URLS}/videos/new`, vidToSubmit)
-//   .then(response => console.log('New Vid: ', response.data));
-// }
 
   render() {
 
