@@ -14,11 +14,14 @@
     margin-bottom: 0;
     margin-left: 0;
   }
+&__image-border {
+  position: relative;
+}
 }
 
 .current-video {
     width: 20rem;
-    height: 11.4375rem;
+    height: 100%;
     z-index: 0;
     @include tablet {
       width: 43.75rem;
@@ -27,30 +30,167 @@
     @include desktop {
       width: 59rem;
       height: 33.75rem;
-      
-      // margin-left: 244px;
-      // margin-right: 244px;
     }
 }
 
-// .button {
-//   &__play {
-//     position: absolute;
-//     height: 1.8rem;
-//     width: 1.2rem;
-//     top: 420px;
-//     left: 325px;
-//     z-index: 7;
-//   }  
-//   &__play-back {
-//     position: absolute;
-//     background-color: black;
-//     opacity: 0.5;
-//     height: 2.5rem;
-//     width: 3rem;
-//     z-index: 6;
-//     top: 415px;
-//     left: 310px;
-//   }   
-// }
+.button {
+  &__play {
+    position: absolute;
+    height: 1.3rem;
+    width: 1rem;
+    z-index: 2;
+    top: 9rem;
+    left: 1.8rem;
+    @include tablet {
+      height: 1.8rem;
+      width: 1.2rem;
+      top: 22rem;
+      left: 2.5rem;
+    }
+    @include desktop {
+      top: 29.4rem;
+      left: 2.5rem;}
+  }  
+  &__back-play {
+    position: absolute;
+    background-color: black;
+    opacity: 0.45;
+    height: 2rem;
+    width: 2.5rem;
+    border-radius: 0.5rem;
+    z-index: 1;
+    top: 8.7rem;
+    left: 1rem;
+    @include tablet {
+      height: 2.7rem;
+      width: 4rem;
+      top: 21.6rem;
+      left: 1rem;
+    }
+    @include desktop {
+      top: 29rem;
+      left: 1rem;
+    }
+  }
+  &__full {
+    position: absolute;
+    height: 1.3rem;
+    width: 1.2rem;
+    top: 9rem;
+    left: 15rem;
+    z-index: 2;
+    @include tablet {
+      height: 1.4rem;
+      width: 1.4rem;
+      top: 22.2rem;
+      left: 38rem;
+    }
+    @include desktop {
+      top: 29.6rem;
+      left: 53rem;
+    }
+  }
+  &__volume {
+    position: absolute;
+    height: 1.3rem;
+    width: 1.2rem;
+    top: 9rem;
+    left: 17rem;
+    z-index: 2;
+    @include tablet {
+      height: 1.4rem;
+      width: 1.4rem;
+      top: 22.2rem;
+      left: 40.5rem;
+    }
+    @include desktop {
+      top: 29.6rem;
+      left: 55.5rem;
+    }
+  }
+  &__back-full-volume {
+    position: absolute;
+    background-color: black;
+    opacity: 0.45;
+    height: 2rem;
+    width: 5rem;
+    top: 8.7rem;
+    left: 14rem;
+    border-radius: 0.5rem;
+    z-index: 1;
+    @include tablet {
+      height: 2.7rem;
+      width: 6rem;
+      top: 21.6rem;
+      left: 36.9rem;     
+    }
+    @include desktop {
+      top: 29rem;
+      left: 51.9rem;     
+    }
+    
+  }
+  &__line-box {
+    position: absolute;
+    background-color: black;
+    opacity: 0.45;
+    height: 2rem;
+    width: 9.2rem;
+    top: 8.7rem;
+    left: 4.2rem;
+    z-index: 1;
+    border-radius: 0.5rem;
+    @include tablet {
+      height: 2.7rem;
+      width: 29.9rem;
+      top: 21.6rem;
+      left: 6rem;     
+    }
+    @include desktop {
+      width: 45rem;
+      top: 29rem;
+      left: 6rem;     
+    }
+  } 
+  &__line-level {
+    position: absolute;
+    background-color: black;
+    opacity: 0.9;
+    height: 0.3rem;
+    width: 7.5rem;
+    top: 9.6rem;
+    left: 5rem;
+    z-index: 1;
+    @include tablet {
+      width: 22.9rem;
+      top: 22.8rem;
+      left: 7rem;     
+      border-radius: 0.5rem;
+    }
+    @include desktop {
+      width: 38rem;
+      top: 30.2rem;
+      left: 7rem;     
+      border-radius: 0.5rem;
+    }
+    
+  }
+  &__line-time {
+    position: absolute;
+    color: white;
+    z-index: 1;
+    border-radius: 0.5rem;
+    display: none;
+    @include tablet {
+      display: block;
+      top: 22.2rem;
+      left: 30.7rem;     
+    }
+    @include desktop {
+      top: 29.6rem;
+      left: 46rem;     
+    }
+    
+  }  
+}
 

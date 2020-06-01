@@ -5,9 +5,6 @@ const axios = require('axios');
 const listOfVideosRoutes = require('./data/VidList'); 
 const listOfVideosDescRoutes = require('./data/VidDesc');
 
-// const listOfVideosDesc = require('./Data/dataVidDesc.json'); //should go to the new VidDesc.js
-
-// console.log(listOfVideosDesc); //Delete before submitting - currently working good
 
 require('dotenv').config();
 

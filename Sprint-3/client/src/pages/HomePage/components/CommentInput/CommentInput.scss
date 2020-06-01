@@ -47,9 +47,11 @@
   &__text-input {
     @include text-input-mobile;
     height: 6rem;
+    width: 58.5vw;
+    margin-bottom: 1rem;
       @include tablet {
         width: 57vw;
-        height: auto;
+        height: 1rem;
         margin-right: 1rem;
       }
       @include desktop {

@@ -29,6 +29,9 @@ class HomePage extends React.Component {
       this.setState ({
         listOfVid: response.data
       })
+    })
+    .catch((error) =>{
+      console.log(error);
     })  
     
     axios
@@ -38,16 +41,16 @@ class HomePage extends React.Component {
         currentVidId: output.data[0].id,
         currentVid: output.data[0],
         currentVidComments: output.data[0].comments
-      }, console.log('Data which goes to the State in componentDidMount',output.data))         
+      })         
+    })
+    .catch((error) =>{
+      console.log(error);
     })
   }
 
   componentDidUpdate(prevProps){
-
-      // make a condition to say that if the video Id is defined 
       
   if (this.props.match.params.currentVidId && prevProps.match.params.currentVidId !== this.props.match.params.currentVidId){
-    console.log('A new video has been clicked==> ', this.props)
     axios
     .get(`${API_URLS}/videos/${this.props.match.params.currentVidId}`)
     .then(output => {
@@ -57,9 +60,9 @@ class HomePage extends React.Component {
           currentVidComments: output.data[0].comments
         })
     })
-    // .catch(error =>{
-    //   console.error(err);
-    // })
+    .catch((error) =>{
+      console.log(error);
+    })
   }
 
   if (!this.props.match.params.currentVidId){
@@ -72,9 +75,9 @@ class HomePage extends React.Component {
           currentVidComments: output.data[0].comments
         })
     })
-    // .catch(error =>{
-    //   console.error(err);
-    // })
+    .catch((error) =>{
+      console.log(error);
+    })
   }
 }
 

@@ -19,7 +19,6 @@ class UploadingVidInfo extends React.Component {
 
   handleVidPublish = e => {
     e.preventDefault();
-    console.log('this.state', this.state);          //DELETE
   
       axios
       .post(`${API_URLS}`, this.state)
@@ -77,11 +76,8 @@ class UploadingVidInfo extends React.Component {
             </div>
           </section>
             
-          <span className="upload__commitment">
-            <Link to="/">
-              <button className="upload__button-cancel" type="submit" id="signUpBtnCancel">CANCEL</button>
-            </Link>
-            
+          <span className="upload__commitment">  
+            <button className="upload__button-cancel" type="submit" id="signUpBtnCancel">CANCEL</button>
             <button className="upload__button-publish" onClick={this.handleVidPublish} type="submit"  id="signUpBtnPublish">PUBLISH</button>
           </span>
         </form>
