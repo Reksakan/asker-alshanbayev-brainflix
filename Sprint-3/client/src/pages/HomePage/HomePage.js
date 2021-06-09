@@ -33,6 +33,7 @@ class HomePage extends React.Component {
       })
     })  
     
+    //when the page reloaded the prev video should be presented.
     axios
     .get(`${API_URLS}/videos/`)
     .then(output => {
