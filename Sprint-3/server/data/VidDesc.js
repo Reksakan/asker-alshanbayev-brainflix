@@ -52,4 +52,20 @@ router.post('/', (request, response) => {
     listOfVideosDesc.unshift(newVidDesc);
 });
 
+router.post('/:id', (request, response) => {
+	console.log('request id on the server side: ', request.params.id)
+	console.log('request body on the server side: ', request.body)
+	const id = request.params.id;
+	const comment = request.body;
+
+	if(id) {
+		listOfVideosDesc.forEach(vid => {
+			if(vid.id === id) {
+				vid.comments.push(comment)
+			}
+		})
+	}
+	return response.status(200).json(listOfVideosDesc)
+})
+
 module.exports = router; 

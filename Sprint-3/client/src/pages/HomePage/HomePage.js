@@ -1,12 +1,14 @@
 import React from 'react';
+import { v4 as uuidv4 } from 'uuid';
 import './HomePage.scss';
+import axios from 'axios';
 import Header from '../../pages/HomePage/components/Header';
 import CurrentVid from '../../pages/HomePage/components/CurrentVid';
 import CurrentVidInfo from '../../pages/HomePage/components/CurrentVidInfo';
 import CommentInput from '../../pages/HomePage/components/CommentInput';
 import Comments from '../../pages/HomePage/components/Comments'
 import VidList from '../../pages/HomePage/components/VidList';
-import axios from 'axios';
+
 
 
 
@@ -29,9 +31,6 @@ class HomePage extends React.Component {
       this.setState ({
         listOfVid: response.data
       })
-    })
-    .catch((error) =>{
-      console.log(error);
     })  
     
     axios
@@ -54,21 +53,7 @@ class HomePage extends React.Component {
     axios
     .get(`${API_URLS}/videos/${this.props.match.params.currentVidId}`)
     .then(output => {
-        this.setState({
-          currentVidId: output.data[0].id,
-          currentVid: output.data[0],
-          currentVidComments: output.data[0].comments
-        })
-    })
-    .catch((error) =>{
-      console.log(error);
-    })
-  }
-
-  if (!this.props.match.params.currentVidId){
-    axios
-    .get(`${API_URLS}/videos/1af0jruup5gu`)
-    .then(output => { 
+      console.log('output in componentDidUpdate: ', output.data)
         this.setState({
           currentVidId: output.data[0].id,
           currentVid: output.data[0],
@@ -81,8 +66,30 @@ class HomePage extends React.Component {
   }
 }
 
-  render() {
+addNewComm = (e) => {
+  e.preventDefault();
+  const id = this.state.currentVid.id;
+  const date = new Date();
+  const timestamp = date.getTime();
+  const comment = {"name" : "Asker", "comment" : e.target.commentText.value, "id" : uuidv4(), "likes" : 0, "timestamp" : timestamp}
+  this.submitComment(id, comment);
+  e.target.commentText.value='';
+}
 
+submitComment = (id, comment) => {
+  axios
+  .post(`${API_URLS}/videos/${id}`, comment)
+  .then(response => {
+    let currentVidComments = response.data.filter(vid => {return vid.id === id})    
+    console.log('currentVidComments[0].comments: ', currentVidComments[0].comments)
+    this.setState({
+      currentVidComments: currentVidComments[0].comments
+    })
+  })
+  .catch(error => {window.alert(error)})
+}
+
+  render() {
     let restListOfVid = this.state.listOfVid.filter(vid => vid.id != this.state.currentVidId)
     return (
       <div>
@@ -91,7 +98,7 @@ class HomePage extends React.Component {
         <section className="main-part__flex">
           <div>
             <CurrentVidInfo currentVidInfo={this.state.currentVid} />
-            <CommentInput />
+            <CommentInput addNewComm={this.addNewComm}/>
             <div className="comment-body">
               <Comments comments={this.state.currentVidComments}/>  
             </div>

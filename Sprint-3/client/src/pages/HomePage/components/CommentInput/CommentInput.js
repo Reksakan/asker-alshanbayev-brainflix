@@ -1,18 +1,18 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './CommentInput.scss';
 
-const CommentInput = () => {
+const CommentInput = (props) => {
     return (
       <section className="comment-section">
         <h2 className="comment">3 Comments</h2>
         <label className="comment__text-title">JOIN THE CONVERSATION</label>
-        <form className="comment__form" id="commentsForm">    
+        <div className="comment__form" id="commentsForm">    
             <div className="comment__avatar"></div>
-            <div className="comment__input">  
-              <textarea className="comment__text-input" name="commTextInput" placeholder="Add a new comment" required></textarea>
-              <button type="submit" className="comment__signUpBtn" id="signUpBtn">COMMENT</button>
-            </div>
-        </form>
+            <form className="comment__input" name="comment-section" onSubmit={props.addNewComm}>  
+              <input className="comment__text-input" type="text" name="commentText"  placeholder="Add a new comment"/>
+              <button className="comment__signUpBtn" type="submit" id="signUpBtn">COMMENT</button>
+            </form>
+        </div>
       </section>
     )
 }

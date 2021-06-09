@@ -13,13 +13,14 @@ class UploadingVidInfo extends React.Component {
   state = {
     id: uuidv4(),
     title: '',
-    channel: '',
+    description: '',
+    channel: 'Ultra radio', 
     image: 'https://i.imgur.com/lt0WHIq.jpeg'
   }
 
   handleVidPublish = e => {
     e.preventDefault();
-  
+      console.log('this.state: ', this.state);
       axios
       .post(`${API_URLS}`, this.state)
       .then(output => {
@@ -29,19 +30,22 @@ class UploadingVidInfo extends React.Component {
         {
           id: ID,
           title: output.title,
-          channel: output.channel,
+          description: output.description,
           image: output.image
         })
-      }
-      )
-      
-
+      })
+      this.setState ({
+        title: '',
+        description: '',
+        image: ''
+      })
   }
 
   handleInputChange = e => {
+    e.preventDefault();
     this.setState ({
       [e.target.name]: e.target.value
-    })
+    }, console.log('[e.target.name]', e.target.value))
   }
 
   render() {
@@ -68,7 +72,7 @@ class UploadingVidInfo extends React.Component {
               <input 
                 className="text__description-input" 
                 type="text"
-                name="channel" 
+                name="description" 
                 onChange={this.handleInputChange}
                 value={this.state.description}
                 /* placeholder="Add a description of your video"  */
